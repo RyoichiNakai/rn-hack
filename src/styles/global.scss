@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --color-primary:    #94A9B1;
+  --color-secondary:  #666666;
+  --color-accent:     #FDFBFB;
+  --color-background: #EEEEEE;
+}
+
+body {
+  font-family: "Josefin Sans", "Noto Sans JP";
+  font-weight: 400;
+  background-color: var(--color-background);
+}

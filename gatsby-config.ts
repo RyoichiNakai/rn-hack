@@ -41,7 +41,8 @@ const config: GatsbyConfig = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-postcss`,
-    `gatsby-plugin-typegen`
+    `gatsby-plugin-typegen`,
+    `gatsby-plugin-fontawesome-css`
   ],
 };
 
