@@ -7,6 +7,9 @@ module.exports = {
       accent: 'var(--color-accent)',
       background: 'var(--color-background)',
     },
+    fontFamily: {
+      body: ['Josefin Sans', 'Noto Sans JP']
+    },
     extend: {},
   },
   plugins: [],

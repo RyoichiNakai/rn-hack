@@ -27,6 +27,7 @@ const config: GatsbyConfig = {
       },
     },
     `gatsby-plugin-sass`,
+    `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     `gatsby-transformer-remark`,
@@ -40,7 +41,6 @@ const config: GatsbyConfig = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-postcss`,
     `gatsby-plugin-typegen`,
     `gatsby-plugin-fontawesome-css`
   ],
