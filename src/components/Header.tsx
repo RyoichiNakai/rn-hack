@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <HeaderWarraper>
       <Link to="/index/">
-        <img src="/rn-hack-header-logo.svg" alt="header-title" tw="h-8 ml-12 align-middle" />
+        <img src="/logo/rn-hack-header-logo.svg" alt="header-title" tw="h-8 ml-12 align-middle" />
       </Link>
     </HeaderWarraper>
   );

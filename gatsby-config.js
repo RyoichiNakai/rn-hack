@@ -40,5 +40,21 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-typegen`,
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        theme_color: '#94a9b1',
+        background_color: '#94a9b1',
+        display: 'browser',
+        scope: '/',
+        start_url: '/',
+        name: 'RN Hack',
+        short_name: 'RN',
+        description: 'RN Hack',
+        display: 'minimal-ui',
+        icon: 'static/favicon/favicon.png'
+      },
+    },
+    `gatsby-plugin-offline`
   ],
 };
