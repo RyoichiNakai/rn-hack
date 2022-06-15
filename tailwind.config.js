@@ -2,13 +2,13 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     colors: {
-      primary: 'var(--color-primary)',
-      secondary: 'var(--color-secondary)',
-      accent: 'var(--color-accent)',
-      background: 'var(--color-background)',
+      primary: '#94A9B1',
+      secondary: '#666666',
+      accent: '#FDFBFB',
+      background: '#EEEEEE',
     },
     fontFamily: {
-      body: ['Josefin Sans', 'Noto Sans JP']
+      body: ['Josefin Sans', 'Noto Sans JP', '-apple-system', 'sans-serif'],
     },
     extend: {},
   },

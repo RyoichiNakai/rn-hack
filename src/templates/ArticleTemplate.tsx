@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, PageProps } from 'gatsby';
-import Layout from '../components/Layout';
+import Layout from '../layouts/Layout';
 
 const ArticleTemplate: React.FC<
   PageProps<GatsbyTypes.ArticleTemplateQuery>
