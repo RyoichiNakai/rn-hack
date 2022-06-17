@@ -2,15 +2,14 @@ import React from 'react';
 import { graphql, PageProps } from 'gatsby';
 import Layout from '../layouts/Layout';
 import ArticleLink from '../components/ArticleLink';
+import Hero from '../components/top/hero/Hero';
 
-const Top: any= ({
-  data,
-}: { data: any}) => {
-  const articles = data.allContentfulArticle.edges
+const Top: any = ({ data }: { data: any }) => {
+  const articles = data.allContentfulArticle.edges;
   return (
     <Layout>
-      <div>Home</div>
-      {articles.map((edge: { node: { slug: React.Key | null | undefined; title: string; date: string; thumbnail: { url: string; }; category: string[]; }; }) => (
+      <Hero />
+      {/* {articles.map((edge: { node: { slug: React.Key | null | undefined; title: string; date: string; thumbnail: { url: string; }; category: string[]; }; }) => (
         <ArticleLink
           key={edge.node.slug}
           title={edge.node.title as string}
@@ -18,7 +17,7 @@ const Top: any= ({
           imageUrl={edge.node.thumbnail?.url as string}
           category={edge.node.category as string[]}
         />
-      ))}
+      ))} */}
     </Layout>
   );
 };

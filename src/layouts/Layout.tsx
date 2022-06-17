@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import 'twin.macro';
 import tw from 'twin.macro';
 
-import Header from '../components/Header';
+import Header from '../components/header/Header';
 import GlobalStyles from '../styles/GlobalStyles'
 
 type LayoutProps = {
