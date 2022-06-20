@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, PageProps } from 'gatsby';
-import tw from 'twin.macro';
+import 'twin.macro';
 
 import Layout from '../layouts/Layout';
 import ArticleLink from '../components/ArticleLink';

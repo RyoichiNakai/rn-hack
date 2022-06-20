@@ -15,7 +15,7 @@ const TopAbout = () => {
         <AboutContent>
           <ProfileImage />
           <TextWrapper>
-            <div tw="text-base">
+            <div>
               <p>新卒1年目のバックエンドエンジニア。絶賛お勉強中。</p>
               <p>
                 ガジェット・インテリア等、様々な「もの」にこだわるのが大好き。
@@ -32,7 +32,7 @@ const TopAbout = () => {
 };
 
 const TopAboutWrapper = tw.div`
-  mt-20 flex justify-center
+  flex justify-center
 `;
 
 const Container = tw.div`
