@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import 'twin.macro';
 import tw from 'twin.macro';
 
-import { menus } from '../../utils/nav/menubar';
+import { menus } from '../../utils/nav/menuBar';
 
 const Header = () => {
   const navLists = menus.map((menu, index) => {
