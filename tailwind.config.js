@@ -11,7 +11,7 @@ module.exports = {
       body: ['Josefin Sans', 'Noto Sans JP', '-apple-system', 'sans-serif'],
     },
     borderRadius: {
-      hero: "50px",
+      DEFAULT: "50px",
       circle: "50%",
       button: "15px",
     },

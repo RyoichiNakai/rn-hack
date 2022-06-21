@@ -36,11 +36,11 @@ const HeroWrapper = styled.div`
 `;
 
 const MainVisual = tw.div`
-  absolute top-0 left-0 w-[80%] h-[79%] rounded-r-hero overflow-hidden z-10
+  absolute top-0 left-0 w-[80%] h-[79%] rounded-r overflow-hidden z-10
 `;
 
 const Rectangle = tw.div`
-  absolute top-[5.8%] left-0 bottom-0 w-[88%] bg-primary rounded-r-hero
+  absolute top-[5.8%] left-0 bottom-0 w-[88%] bg-primary rounded-r
 `;
 
 export default Hero;

@@ -3,12 +3,29 @@ import { graphql, PageProps } from 'gatsby';
 import 'twin.macro';
 
 import Layout from '../layouts/Layout';
-import ArticleLink from '../components/ArticleLink';
 import Hero from '../components/top/hero/Hero';
 import TopAbout from '../components/top/about/TopAbout';
+import TopArticle from '../components/top/articles/TopArticles';
+import ArticleCard from '../components/utils/ArticleCard';
 
-const Top: any = ({ data }: { data: any }) => {
-  const articles = data.allContentfulArticle.edges;
+const Top: React.FC<PageProps<GatsbyTypes.allAritcleListQuery>> = ({
+  data,
+}) => {
+  const articles = data.allContentfulArticle.nodes;
+
+  const articleCards = articles.map((node) => {
+    return (
+      <ArticleCard
+        key={node.id}
+        id={node.id}
+        imageUrl={node.thumbnail?.url ?? '/card/default-card-img.png'}
+        title={node.title as string}
+        date={node.createdAt as string}
+        categories={node.category as string[]}
+      />
+    );
+  });
+
   return (
     <Layout>
       <section>
@@ -21,31 +38,24 @@ const Top: any = ({ data }: { data: any }) => {
         </div>
       </section>
 
-      {/* {articles.map((edge: { node: { slug: React.Key | null | undefined; title: string; date: string; thumbnail: { url: string; }; category: string[]; }; }) => (
-        <ArticleLink
-          key={edge.node.slug}
-          title={edge.node.title as string}
-          date={edge.node.date as string}
-          imageUrl={edge.node.thumbnail?.url as string}
-          category={edge.node.category as string[]}
-        />
-      ))} */}
+      <section>
+        <TopArticle>{articleCards}</TopArticle>
+      </section>
     </Layout>
   );
 };
 
 export const query = graphql`
   query allAritcleList {
-    allContentfulArticle {
-      edges {
-        node {
-          slug
-          title
-          thumbnail {
-            url
-          }
-          category
-          date
+    allContentfulArticle(limit: 6) {
+      nodes {
+        category
+        id
+        slug
+        title
+        createdAt(formatString: "YYYY.MM.DD")
+        thumbnail {
+          url
         }
       }
     }
