@@ -1,11 +1,9 @@
-import type { GatsbyConfig } from 'gatsby';
-
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 require('dotenv').config({
   path: `.env`,
 });
 
-const config: GatsbyConfig = {
+module.exports = {
   siteMetadata: {
     title: `RN HACK`,
     siteUrl: `https://www.yourdomain.tld`,
@@ -42,8 +40,21 @@ const config: GatsbyConfig = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-typegen`,
-    `gatsby-plugin-fontawesome-css`
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        theme_color: '#94a9b1',
+        background_color: '#94a9b1',
+        display: 'browser',
+        scope: '/',
+        start_url: '/',
+        name: 'RN Hack',
+        short_name: 'RN',
+        description: 'RN Hack',
+        display: 'minimal-ui',
+        icon: 'static/favicon/favicon.png'
+      },
+    },
+    `gatsby-plugin-offline`
   ],
 };
-
-export default config;
