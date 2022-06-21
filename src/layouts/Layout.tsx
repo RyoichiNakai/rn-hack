@@ -2,8 +2,9 @@ import React, { ReactNode } from 'react';
 import 'twin.macro';
 import tw from 'twin.macro';
 
+import GlobalStyles from '../styles/GlobalStyles';
 import Header from '../components/header/Header';
-import GlobalStyles from '../styles/GlobalStyles'
+import Footer from '../components/footer/Footer';
 
 type LayoutProps = {
   children: ReactNode;
@@ -16,6 +17,7 @@ const Layout = ({ children }: LayoutProps) => {
 
       <Header />
       <main>{children}</main>
+      <Footer />
     </>
   );
 };
