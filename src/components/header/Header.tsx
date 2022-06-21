@@ -28,7 +28,7 @@ const Header = () => {
   );
 };
 
-const HeaderWarraper = tw.div`
+const HeaderWarraper = tw.header`
   flex h-20 justify-between items-center sticky w-screen z-50
 `;
 
