@@ -6,7 +6,7 @@ import tw from 'twin.macro';
 import { menus } from '../../utils/nav/menubar';
 
 const Header = () => {
-  const NavLists = menus.map((menu, index) => {
+  const navLists = menus.map((menu, index) => {
     return <NavList key={index}>{menu.text}</NavList>;
   });
 
@@ -22,7 +22,7 @@ const Header = () => {
       </Logo>
 
       <nav>
-        <ul>{NavLists}</ul>
+        <ul>{navLists}</ul>
       </nav>
     </HeaderWarraper>
   );
