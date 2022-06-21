@@ -3,7 +3,13 @@ import { Link } from 'gatsby';
 import 'twin.macro';
 import tw from 'twin.macro';
 
+import { menus } from '../../utils/nav/menubar';
+
 const Header = () => {
+  const NavLists = menus.map((menu, index) => {
+    return <NavList key={index}>{menu.text}</NavList>;
+  });
+
   return (
     <HeaderWarraper>
       <Logo>
@@ -16,10 +22,7 @@ const Header = () => {
       </Logo>
 
       <nav>
-        <ul>
-          <NavList>ABOUT</NavList>
-          <NavList>DEVELOPMENT</NavList>
-        </ul>
+        <ul>{NavLists}</ul>
       </nav>
     </HeaderWarraper>
   );
@@ -35,6 +38,6 @@ const Logo = tw.div`
 
 const NavList = tw.li`
   inline mr-4 text-2xl
-`
+`;
 
 export default Header;
