@@ -53,7 +53,7 @@ export const query = graphql`
         id
         slug
         title
-        createdAt(formatString: "YYYY.MM.DD")
+        createdAt(formatString: "YYYY.MM.DD", locale: "ja")
         thumbnail {
           url
         }
