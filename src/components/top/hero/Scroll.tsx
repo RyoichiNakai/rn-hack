@@ -36,16 +36,16 @@ const scrollDown = keyframes`
 `;
 
 const ScrollWrapper = styled.div`
-  ${tw`absolute left-16 bottom-0 z-10 h-[16%]`}
+  ${tw`absolute left-16 bottom-0 h-[18%]`}
 
   &::before {
     ${tw`bg-accent`}
     content: '';
     position: absolute;
-    bottom: 1rem;
+    top: 0;
     left: 0;
     width: 2px;
-    height: 100%;
+    height: 90%;
     animation: ${scrollDown} 3s cubic-bezier(1, 0, 0, 1) infinite;
   }
 
@@ -67,7 +67,7 @@ const scrollText = css`
   font-size: clamp(1.5rem, 3vh, 2rem);
   position: absolute;
   left: -3rem;
-  bottom: 1rem;
+  top: 0;
   writing-mode: vertical-rl;
 `;
 

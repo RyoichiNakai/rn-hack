@@ -5,6 +5,7 @@ import 'twin.macro';
 import tw from 'twin.macro';
 
 import Title from '../../utils/article/Title';
+import BgRectRight from '../../utils/bgRect/Right';
 
 type TopArticleProps = {
   children: React.ReactNode;
@@ -18,10 +19,13 @@ type TopArticleProps = {
 const TopArticle = (props: TopArticleProps) => {
   return (
     <TopArticleWrapper>
-      <BgRectangleRight />
+      <BgRectRight />
 
       <Articles>
-        <Title title="TOP ARTICLES" />
+        <Title
+          title="TOP ARTICLES"
+          underLineWidth="400"
+        />
 
         <CardWrapper>{props.children}</CardWrapper>
 
@@ -35,10 +39,6 @@ const TopArticle = (props: TopArticleProps) => {
 
 const TopArticleWrapper = tw.div`
   flex justify-center relative
-`;
-
-const BgRectangleRight = tw.div`
-  absolute right-0 top-0 w-[34.3%] h-[280px] bg-primary rounded-l
 `;
 
 const Articles = tw.div`

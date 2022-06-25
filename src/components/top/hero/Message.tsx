@@ -22,7 +22,7 @@ const Message = () => {
 };
 
 const MessageWrapper = tw.div`
-  absolute bottom-0 right-0 py-2 z-10
+  absolute bottom-0 right-0 pt-1 z-10
 `;
 
 const messageText = css`
