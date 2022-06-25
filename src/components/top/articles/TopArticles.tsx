@@ -1,8 +1,10 @@
 /** @jsx jsx */
-import { jsx, css } from '@emotion/react';
+import { jsx } from '@emotion/react';
 import React from 'react';
 import 'twin.macro';
 import tw from 'twin.macro';
+
+import Title from '../../utils/article/Title';
 
 type TopArticleProps = {
   children: React.ReactNode;
@@ -19,9 +21,7 @@ const TopArticle = (props: TopArticleProps) => {
       <BgRectangleRight />
 
       <Articles>
-        <div css={title}>
-          <h1>TOP ARTICLES</h1>
-        </div>
+        <Title title="TOP ARTICLES" />
 
         <CardWrapper>{props.children}</CardWrapper>
 
@@ -43,21 +43,6 @@ const BgRectangleRight = tw.div`
 
 const Articles = tw.div`
   w-full max-w-[960px] bg-accent rounded z-10 mx-20 my-20
-`;
-
-const title = css`
-  ${tw`text-center pt-20 text-5xl relative`}
-  &::after {
-    ${tw`bg-secondary`}
-    content: '';
-    width: 400px;
-    height: 2px;
-    position: absolute;
-    left: 50%;
-    right: 50%;
-    bottom: 2px;
-    transform: translateX(-50%);
-  }
 `;
 
 const CardWrapper = tw.div`

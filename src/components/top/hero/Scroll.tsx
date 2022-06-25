@@ -36,7 +36,7 @@ const scrollDown = keyframes`
 `;
 
 const ScrollWrapper = styled.div`
-  ${tw`absolute left-16 bottom-4 z-10 h-[16%]`}
+  ${tw`absolute left-16 bottom-0 z-10 h-[16%]`}
 
   &::before {
     ${tw`bg-accent`}
@@ -44,9 +44,9 @@ const ScrollWrapper = styled.div`
     position: absolute;
     bottom: 1rem;
     left: 0;
-    width: 3px;
+    width: 2px;
     height: 100%;
-    animation: ${scrollDown} 2s cubic-bezier(1, 0, 0, 1) infinite;
+    animation: ${scrollDown} 3s cubic-bezier(1, 0, 0, 1) infinite;
   }
 
   // 気に食わないので一旦消しとく
@@ -67,7 +67,7 @@ const scrollText = css`
   font-size: clamp(1.5rem, 3vh, 2rem);
   position: absolute;
   left: -3rem;
-  top: 0;
+  bottom: 1rem;
   writing-mode: vertical-rl;
 `;
 

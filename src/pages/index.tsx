@@ -6,7 +6,7 @@ import Layout from '../layouts/Layout';
 import Hero from '../components/top/hero/Hero';
 import TopAbout from '../components/top/about/TopAbout';
 import TopArticle from '../components/top/articles/TopArticles';
-import ArticleCard from '../components/utils/ArticleCard';
+import ArticleCard from '../components/utils/article/ArticleCard';
 
 const Top: React.FC<PageProps<GatsbyTypes.allAritcleListQuery>> = ({
   data,
