@@ -29,6 +29,7 @@ const TopArticle = (props: TopArticleProps) => {
 
         <CardWrapper>{props.children}</CardWrapper>
 
+        {/* TODO: ボタンのコンポーネント化 */}
         <ButtonWrapper>
           <MoreButton>MORE</MoreButton>
         </ButtonWrapper>
