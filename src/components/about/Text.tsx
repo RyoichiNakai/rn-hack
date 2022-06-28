@@ -12,7 +12,7 @@ const AboutText = (props: AboutTextProps) => {
   return (
     <AboutTextWrapper>
       <div tw="mx-6">
-        <h2 tw={aboutTextCss}>{props.title}</h2>
+        <h2 tw="text-3xl text-primary leading-10">{props.title}</h2>
         <ReactMarkdown>{props.markdown}</ReactMarkdown>
       </div>
     </AboutTextWrapper>
@@ -21,10 +21,6 @@ const AboutText = (props: AboutTextProps) => {
 
 const AboutTextWrapper = tw.div`
   flex flex-1 justify-center items-center
-`;
-
-const aboutTextCss = `
-  text-3xl text-primary leading-10
 `;
 
 export default AboutText;
