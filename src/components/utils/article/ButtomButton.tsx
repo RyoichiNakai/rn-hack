@@ -1,3 +1,4 @@
+import { navigate } from 'gatsby';
 import React from 'react';
 import 'twin.macro';
 import tw from 'twin.macro';
@@ -7,7 +8,11 @@ type ButtomButtonProps = {
 };
 
 const ButtomButton = (props: ButtomButtonProps) => {
-const ButtonWrapper = tw.div`
+  const handleClick = () => {
+    navigate('/');
+  };
+
+  const ButtonWrapper = tw.div`
   w-full flex justify-center
 `;
 
@@ -17,7 +22,7 @@ const ButtonWrapper = tw.div`
 
   return (
     <ButtonWrapper>
-      <MoreButton>{props.text}</MoreButton>
+      <MoreButton onClick={handleClick}>{props.text}</MoreButton>
     </ButtonWrapper>
   );
 };
