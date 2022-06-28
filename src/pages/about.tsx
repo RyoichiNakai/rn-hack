@@ -20,13 +20,19 @@ const About = () => {
       <div tw="mt-40 first:mt-32">
         {index % 2 === 0 ? (
           <div tw="flex">
-            <AboutText title={config.title} markdown={config.markdown} />
+            <AboutText
+              title={config.title}
+              markdown={config.markdown}
+            />
             <ListImageRight imageUrl={config.image} />
           </div>
         ) : (
           <div tw="flex">
             <ListImageLeft imageUrl={config.image} />
-            <AboutText title={config.title} markdown={config.markdown} />
+            <AboutText
+              title={config.title}
+              markdown={config.markdown}
+            />
           </div>
         )}
       </div>
@@ -48,7 +54,10 @@ const About = () => {
             <div tw="ml-16">
               <ProfileImage />
             </div>
-            <AboutText title={AboutConfig.profile.title} markdown={AboutConfig.profile.markdown} />
+            <AboutText
+              title={AboutConfig.profile.title}
+              markdown={AboutConfig.profile.markdown}
+            />
           </div>
 
           <div>{aboutList}</div>
