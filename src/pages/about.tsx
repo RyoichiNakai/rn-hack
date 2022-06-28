@@ -10,7 +10,7 @@ import ProfileImage from '../components/utils/ProfileImage';
 import BgRectLeft from '../components/utils/bgRect/Left';
 import ListImageRight from '../components/about/ListImageRight';
 import ListImageLeft from '../components/about/ListImageLeft';
-import AboutText from '../components/about/text';
+import AboutText from '../components/about/Text';
 
 import { AboutConfig } from '../../pages/about';
 
