@@ -6,6 +6,7 @@ import tw from 'twin.macro';
 
 import Title from '../../utils/article/Title';
 import BgRectRight from '../../utils/bgRect/Right';
+import ButtomButton from '../../utils/article/ButtomButton';
 
 type TopArticleProps = {
   children: React.ReactNode;
@@ -29,10 +30,9 @@ const TopArticle = (props: TopArticleProps) => {
 
         <CardWrapper>{props.children}</CardWrapper>
 
-        {/* TODO: ボタンのコンポーネント化 */}
-        <ButtonWrapper>
-          <MoreButton>MORE</MoreButton>
-        </ButtonWrapper>
+        <div tw="mt-20 mb-10">
+          <ButtomButton text="MORE" />
+        </div>
       </Articles>
     </TopArticleWrapper>
   );
@@ -48,14 +48,6 @@ const Articles = tw.div`
 
 const CardWrapper = tw.div`
   mt-20 mx-20 grid grid-cols-2 gap-x-[120px] gap-y-[70px]
-`;
-
-const ButtonWrapper = tw.div`
-  mt-20 mb-10 w-full flex justify-center
-`;
-
-const MoreButton = tw.button`
-  w-[200px] h-[40px] flex justify-center items-center bg-primary text-accent rounded-button
 `;
 
 export default TopArticle;

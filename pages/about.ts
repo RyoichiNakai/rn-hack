@@ -9,8 +9,8 @@ AWS等のクラウドやコンテナ技術が得意。
 疑問に思ったことを共有します。
     `,
   },
-  list: {
-    skills: {
+  list: [
+    {
       title: 'Skills',
       image: '/about/skills.png',
       markdown: `
@@ -23,8 +23,8 @@ AWS等のクラウドやコンテナ技術が得意。
 #### CI/CD
 - Github Actions / Circle CI`,
     },
-    architecture: {
-      title: 'ARCHITECTURE',
+    {
+      title: 'Architecture',
       image: '/about/architecture.png',
       markdown: `
 このブログは左図のようなアーキテクチャで構成されています。  
@@ -37,5 +37,5 @@ Githubにプッシュしたり、Contentfulにて記事を投稿すると、Code
 また、CloudFrontにてS3のコンテンツを配信しています。
       `,
     },
-  },
+  ],
 };
