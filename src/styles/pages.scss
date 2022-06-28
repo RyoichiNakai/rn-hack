@@ -1,0 +1,57 @@
+.pageBody {
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: bold;
+    line-height: 1.25;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+  }
+
+  h3 {
+    font-size: 21px;
+    border-bottom: solid 1px #ccc;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  h5 {
+    font-size: 16px;
+  }
+
+  h6 {
+    font-size: 14px;
+  }
+
+  ol,
+  ul {
+    padding-left: 2em;
+  }
+  ul {
+    li {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+      list-style-type: disc;
+    }
+  }
+  ol {
+    li {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+      list-style-type: decimal;
+    }
+  }
+
+  a:link {
+    color: #94a9b1;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #94a9b1;
+    text-decoration: underline;
+  }
+}

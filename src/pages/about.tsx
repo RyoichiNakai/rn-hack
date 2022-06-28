@@ -17,7 +17,10 @@ import { AboutConfig } from '../../pages/about';
 const About = () => {
   const aboutList = AboutConfig.list.map((config, index) => {
     return (
-      <div tw="mt-40 first:mt-32">
+      <div
+        key={index}
+        tw="mt-40 first:mt-32"
+      >
         {index % 2 === 0 ? (
           <div tw="flex">
             <AboutText

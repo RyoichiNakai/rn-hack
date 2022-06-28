@@ -7,35 +7,40 @@ export const AboutConfig = {
 AWS等のクラウドやコンテナ技術が得意。  
 このブログでは、日々の開発でのアウトプットや  
 疑問に思ったことを共有します。
-    `,
+`,
   },
   list: [
     {
       title: 'Skills',
       image: '/about/skills.png',
       markdown: `
-#### Backend
+**Backend**
 - Go / Python
-#### Frontend
+
+**Frontend**
 - React / Vue / TypeScript
-#### infrastructure
+
+**Infrastructure**
 - AWS / Firebase / Terraform / Dokcer
-#### CI/CD
-- Github Actions / Circle CI`,
+
+**CI/CD**
+- Github Actions / Circle CI
+`,
     },
     {
       title: 'Architecture',
       image: '/about/architecture.png',
       markdown: `
-このブログは左図のようなアーキテクチャで構成されています。  
+このブログは左図のようなAWSのアーキテクチャで構成されています。  
 
-- CMS: Contentful
-- Hosting: Amplify
-- Frontend: Gatsby
+- **CMS** : Contentful
+- **Hosting**: Amplify
+- **Frontend**: Gatsby / React  
 
-Githubにプッシュしたり、Contentfulにて記事を投稿すると、CodeBuildにてビルドされ、アーティファクトがS3に格納されます。
+Githubにプッシュしたり、Contentfulにて記事を投稿すると、  
+CodeBuildにてビルドされ、アーティファクトがS3に格納されます。  
 また、CloudFrontにてS3のコンテンツを配信しています。
-      `,
+`,
     },
   ],
 };

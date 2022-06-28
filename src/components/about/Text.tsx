@@ -3,6 +3,8 @@ import 'twin.macro';
 import tw from 'twin.macro';
 import ReactMarkdown from 'react-markdown';
 
+import '../../styles/pages.scss';
+
 type AboutTextProps = {
   title: string;
   markdown: string;
@@ -13,7 +15,7 @@ const AboutText = (props: AboutTextProps) => {
     <AboutTextWrapper>
       <div tw="mx-6">
         <h2 tw="text-3xl text-primary leading-10">{props.title}</h2>
-        <ReactMarkdown>{props.markdown}</ReactMarkdown>
+        <ReactMarkdown className="pageBody">{props.markdown}</ReactMarkdown>
       </div>
     </AboutTextWrapper>
   );
