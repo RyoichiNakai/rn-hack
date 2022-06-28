@@ -17,6 +17,7 @@ const Header = () => {
           <img
             src="/logo/rn-hack-header-logo.svg"
             alt="header-title"
+            width="224px"
           />
         </Link>
       </Logo>
@@ -29,7 +30,7 @@ const Header = () => {
 };
 
 const HeaderWarraper = tw.header`
-  flex h-20 justify-between items-center sticky w-screen z-50
+  flex w-full h-20 justify-between items-center sticky z-50
 `;
 
 const Logo = tw.div`
@@ -37,7 +38,7 @@ const Logo = tw.div`
 `;
 
 const NavList = tw.li`
-  inline mr-4 text-2xl
+  inline pr-4 text-2xl
 `;
 
 export default Header;

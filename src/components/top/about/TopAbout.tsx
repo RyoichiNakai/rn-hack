@@ -1,8 +1,10 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/react';
 import tw from 'twin.macro';
+import ReactMarkdown from "react-markdown";
 
 import ProfileImage from '../../utils/ProfileImage';
+import { AboutConfig } from '../../../../pages/about';
 
 const TopAbout = () => {
   return (
@@ -15,15 +17,9 @@ const TopAbout = () => {
         <AboutContent>
           <ProfileImage />
           <TextWrapper>
-            <div>
-              <p>新卒1年目のバックエンドエンジニア。絶賛お勉強中。</p>
-              <p>
-                ガジェット・インテリア等、様々な「もの」にこだわるのが大好き。
-              </p>
-              <p>
-                このブログでは、開発でのアウトプットや好きな「もの」を共有します。
-              </p>
-            </div>
+            <ReactMarkdown>
+              {AboutConfig.profile.markdown}
+            </ReactMarkdown>
           </TextWrapper>
         </AboutContent>
       </Container>
