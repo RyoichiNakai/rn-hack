@@ -10,12 +10,12 @@ type TitleProps = {
 
 const Title = (props: TitleProps) => {
   const title = css`
-    ${tw`text-center pt-20 text-5xl relative`}
+    ${tw`text-center pt-20 text-4xl relative`}
     &::after {
-      ${tw`bg-secondary`}
+      ${tw`bg-primary`}
       content: '';
       width: ${props.underLineWidth}px;
-      height: 2px;
+      height: 3px;
       position: absolute;
       left: 50%;
       right: 50%;

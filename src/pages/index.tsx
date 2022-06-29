@@ -22,6 +22,7 @@ const Top: React.FC<PageProps<GatsbyTypes.allAritcleListQuery>> = ({
         title={node.title as string}
         date={node.createdAt as string}
         categories={node.category as string[]}
+        slug={node.slug as string}
       />
     );
   });
@@ -33,13 +34,15 @@ const Top: React.FC<PageProps<GatsbyTypes.allAritcleListQuery>> = ({
       </section>
 
       <section>
-        <div tw="mt-20">
+        <div tw="mt-40">
           <TopAbout />
         </div>
       </section>
 
       <section>
-        <TopArticle>{articleCards}</TopArticle>
+        <div tw="mt-20">
+          <TopArticle>{articleCards}</TopArticle>
+        </div>
       </section>
     </Layout>
   );

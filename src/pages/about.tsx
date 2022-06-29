@@ -80,7 +80,7 @@ const AboutWrapper = tw.div`
 
 // TODO:レスポンシブ対応
 const Content = tw.div`
-  w-full max-w-[1024px] bg-accent rounded z-10 mx-20 my-20
+  w-full max-w-5xl bg-accent rounded z-10 mx-20 my-20
 `;
 
 export default About;

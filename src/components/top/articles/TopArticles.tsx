@@ -28,8 +28,10 @@ const TopArticle = (props: TopArticleProps) => {
           underLineWidth="400"
         />
 
-        <CardWrapper>{props.children}</CardWrapper>
-
+        <div tw="flex mt-20 justify-center">
+          <CardWrapper>{props.children}</CardWrapper>
+        </div>
+        
         <div tw="mt-20 mb-10">
           <ButtomButton text="MORE" />
         </div>
@@ -43,11 +45,12 @@ const TopArticleWrapper = tw.div`
 `;
 
 const Articles = tw.div`
-  w-full max-w-[960px] bg-accent rounded z-10 mx-20 my-20
+  w-full container bg-accent rounded z-10 my-20
 `;
 
+// TODO: レスポンシブ対応
 const CardWrapper = tw.div`
-  mt-20 mx-20 grid grid-cols-2 gap-x-[120px] gap-y-[70px]
+  grid grid-cols-3 gap-x-16
 `;
 
 export default TopArticle;

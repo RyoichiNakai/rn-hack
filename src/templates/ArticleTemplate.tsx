@@ -1,6 +1,10 @@
 import React from 'react';
 import { graphql, PageProps } from 'gatsby';
+import 'twin.macro';
+import tw from 'twin.macro';
+
 import Layout from '../layouts/Layout';
+import BgRectLeft from '../components/utils/bgRect/Left';
 
 const ArticleTemplate: React.FC<
   PageProps<GatsbyTypes.ArticleTemplateQuery>
@@ -8,10 +12,9 @@ const ArticleTemplate: React.FC<
   const article = data.allContentfulArticle.nodes[0];
   return (
     <Layout>
-      <div className="post-header">
-        <h1>{article.title}</h1>
-        <p className="post-date">{}</p>
-      </div>
+      <ArticleWrapper>
+        <BgRectLeft />
+      </ArticleWrapper>
       <img
         src={article.thumbnail?.url}
         className="post-image"
@@ -26,6 +29,14 @@ const ArticleTemplate: React.FC<
     </Layout>
   );
 };
+
+const ArticleWrapper = tw.div`
+  flex justify-center relative
+`;
+
+const Container = tw.div`
+  container
+`;
 
 export const pageQuery = graphql`
   query ArticleTemplate($id: String!) {
@@ -47,5 +58,50 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+/*
+  allContentfulArticle {
+    edges {
+      previous {
+        id
+        title
+        slug
+        thumbnail {
+          url
+          title
+        }
+        category
+        createdAt(formatString: "YYYY.MM.DD", locale: "ja")
+      }
+      node {
+        id
+        title
+        body {
+          childMarkdownRemark {
+            html
+            tableOfContents
+          }
+        }
+        thumbnail {
+          url
+          title
+        }
+        category
+        createdAt(formatString: "YYYY.MM.DD", locale: "ja")
+      }
+      next {
+        id
+        title
+        slug
+        thumbnail {
+          url
+          title
+        }
+        category
+        createdAt(formatString: "YYYY.MM.DD", locale: "ja")
+      }
+    }
+  }
+*/
 
 export default ArticleTemplate;

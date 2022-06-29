@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/react';
+import { navigate } from 'gatsby';
 import 'twin.macro';
 import tw from 'twin.macro';
 
@@ -9,6 +10,7 @@ type ArticleCardProps = {
   title: string;
   date: string;
   categories: string[];
+  slug: string;
 };
 
 const ArticleCard = (props: ArticleCardProps) => {
@@ -17,11 +19,22 @@ const ArticleCard = (props: ArticleCardProps) => {
   });
 
   const categorySpans = categories.map((category, index) => {
-    return <span key={index} tw="-ml-3 text-[14px] mr-2">{category}</span>;
+    return (
+      <span
+        key={index}
+        tw="-ml-3 text-[14px] mr-2"
+      >
+        {category}
+      </span>
+    );
   });
 
+  const handleClick = () => {
+    navigate('/article/' + props.slug);
+  };
+
   return (
-    <ArticleCardWrapper>
+    <ArticleCardWrapper onClick={handleClick}>
       <CardImageWrapper>
         <img
           src={props.imageUrl}
@@ -46,7 +59,7 @@ const ArticleCard = (props: ArticleCardProps) => {
 };
 
 const ArticleCardWrapper = tw.div`
-  w-[340px] bg-accent
+  w-[340px] bg-accent cursor-pointer
 `;
 
 const CardImageWrapper = tw.div`

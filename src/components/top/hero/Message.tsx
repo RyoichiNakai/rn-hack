@@ -27,7 +27,7 @@ const MessageWrapper = tw.div`
 
 const messageText = css`
   ${tw`text-right leading-snug`}
-  font-size: clamp(3rem, 6vh, 5rem);
+  font-size: clamp(3rem, 6vh, 4.5rem);
 `;
 
 export default Message;

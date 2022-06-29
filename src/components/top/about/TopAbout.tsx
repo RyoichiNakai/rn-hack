@@ -40,11 +40,11 @@ const AboutContent = tw.div`
 `;
 
 const title = css`
-  ${tw`relative text-5xl`}
+  ${tw`relative text-4xl`}
   &::after {
-    ${tw`bg-secondary`}
+    ${tw`bg-primary`}
     content: '';
-    height: 2px;
+    height: 3px;
     width: 100%;
     position: absolute;
     bottom: 2px;
