@@ -22,7 +22,7 @@ const ArticleCard = (props: ArticleCardProps) => {
     return (
       <span
         key={index}
-        tw="-ml-3 text-[14px] mr-2"
+        tw="-ml-3 mr-2 text-[14px] bg-primary rounded-badge text-accent p-1"
       >
         {category}
       </span>
@@ -47,7 +47,9 @@ const ArticleCard = (props: ArticleCardProps) => {
 
       <CardContent>
         <CardTitleBar>
-          {categorySpans}
+          <div tw="flex">
+            <p>{categorySpans}</p>
+          </div>
           <time tw="text-[14px]">{props.date}</time>
         </CardTitleBar>
         <div>
@@ -71,7 +73,7 @@ const CardContent = tw.div`
 `;
 
 const CardTitleBar = tw.div`
-  flex justify-between py-2
+  flex justify-between py-2 items-center
 `;
 
 const cardTitle = css`

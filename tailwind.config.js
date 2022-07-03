@@ -14,6 +14,7 @@ module.exports = {
       DEFAULT: "50px",
       circle: "50%",
       button: "15px",
+      badge: "10px",
     },
     extend: {},
   },

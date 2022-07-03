@@ -2,6 +2,7 @@ import React from 'react';
 import 'twin.macro';
 import tw from 'twin.macro';
 
+import IconButton from '../utils/IconButton';
 import { menus } from '../../utils/nav/menuBar';
 
 const Footer = () => {
@@ -33,10 +34,10 @@ const Footer = () => {
             <ul tw="flex justify-center">{navLists}</ul>
           </nav>
           <IconButtonWrapper tw="mt-4">
-            <button tw="mr-6 bg-accent rounded-circle w-[40px] h-[40px]"></button>
-            <button tw="mr-6 bg-accent rounded-circle w-[40px] h-[40px]"></button>
-            <button tw="mr-6 bg-accent rounded-circle w-[40px] h-[40px]"></button>
-            <button tw="bg-accent rounded-circle w-[40px] h-[40px]"></button>
+            <IconButton isDark={false} />
+            <IconButton isDark={false} />
+            <IconButton isDark={false} />
+            <IconButton isDark={false} />
           </IconButtonWrapper>
         </div>
       </FooterContentWrapper>
